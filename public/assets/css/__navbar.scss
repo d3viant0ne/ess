@@ -1,0 +1,22 @@
+md-toolbar {
+  min-height: $navbar-height;
+  height: $navbar-height;
+}
+
+.md-toolbar-tools {
+  background-color: $navbar-bg-color;
+  padding: 0;
+  
+  .md-button {
+    margin: 0 !important;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+  }
+}

@@ -1,0 +1,29 @@
+.form-group {
+  background: white;
+  margin: 0;
+  border-bottom: 1px solid $divider-color;
+  
+  &:last-child {
+    border-bottom: 0;
+  }
+  
+  .control-label {
+    padding: 10px 15px 0;
+    margin: 0;
+    font-size: 12px;
+  }
+  
+  .form-control {
+    -webkit-appearance: none;
+    appearance: none;
+    font-size: 17px;
+    border: 0;
+    box-shadow: none;
+    border-radius: 0;
+    color: $text-color;
+    padding-left: 15px;
+    height: 40px;
+    margin-top: -5px;
+    font-weight: 300;
+  }
+}

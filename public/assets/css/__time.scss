@@ -1,0 +1,181 @@
+.month-picker {
+  $time-heading-height: 44px;
+  background: #f5f5f5;
+  @include flexbox;
+  
+  h3 {
+    color: $text-color;
+    margin: 0;
+    text-align: center;
+    @include flex(1);
+    font-size: 17px;
+    line-height: 20px;
+    line-height: $time-heading-height;
+  }
+  
+  .md-button.md-icon-button {
+    //padding-top: 0;
+    //padding-bottom: 0;
+    margin: 0;
+    //@include hide-text;
+    //width: 35px;
+    //height: $time-heading-height;
+  }
+}
+
+.time {  
+  &-calendar {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    
+    &-heading {
+      background: #f5f5f5;
+      color: $text-color;
+      @include flexbox;
+      border-bottom: 1px solid $divider-color;
+
+      span {
+        width: 14.2857%;
+        text-align: center;
+        font-size: 10px;
+        display: block;
+        padding-bottom: 10px;
+      }
+    }
+    
+    &-week {
+      background: white;
+      @include flexbox;
+      border-bottom: 1px solid $divider-color;
+      //@include transition(all .3s ease);
+      
+      &:empty {
+        display: none;
+      }
+      
+      &:focus {
+        outline: none !important;
+      }
+      
+      .text-muted {
+        color: #ccc;
+      }
+      
+      &:not(.collapsed) {
+        border-bottom-color: transparent;
+        background: #1c69cf;
+        color: white;
+        
+        .text-muted {
+          color: #65b3ff;
+        }
+      }
+      
+      > span {
+        width: 14.2857%;
+        text-align: center;
+        display: block;
+        line-height: 44px;
+        font-size: 17px;
+        
+        .holiday {
+          color: white;
+          position: relative;          
+          $circle-size: 28px;
+          background: #ffad1f;
+          width: $circle-size;
+          height: $circle-size;
+          line-height: $circle-size;
+          border-radius: 50%;
+          display: inline-block;
+        }
+      }
+    }
+
+    
+    &-values {
+      background: #262626;
+      @include flexbox;
+      font-size: 17px;
+      line-height: 17px;
+      font-weight: bold;
+      
+      span {
+        width: 14.2857%;
+        display: block;
+        text-align: center;
+      }
+      
+      &-worked {
+        padding-top: 10px;
+        
+        span {
+          color: white;
+        }
+      }
+      
+      &-inout {
+        padding-top: 10px;
+        color: #aaa;
+        font-weight: 500;
+        padding-bottom: 10px;
+        font-size: 13px;
+        line-height: 15px;
+      }
+      
+      &-scheduled {
+        color: #aaa;
+        font-weight: 500;
+        padding-bottom: 10px;
+      }
+
+      small {
+        display: block;
+        text-transform: uppercase;
+        font-size: 9px;
+        line-height: 14px;
+      }
+    }
+    
+    &-detail {
+      background: #262626;
+      color: white;
+      overflow: hidden;
+      padding: 15px 0;
+      text-align: center;
+      
+      &-heading {
+        font-size: 17px;
+        font-weight: bold;
+        margin: 0 0 8px;
+      }
+      
+      &-text {
+        //color: $text-color-muted;
+        color: #aaa;
+        font-weight: 500;
+        margin: 0;
+      }
+      
+      
+      dl {
+        @include flexbox;
+        @include flex-wrap(wrap);
+        
+        dt, dd {
+          width: 50%;
+          padding: 0 8px;
+          margin-bottom: 5px;
+        }
+        
+        dt {
+          text-align: right;
+        }
+        
+        dd {
+          text-align: left;
+        }
+      }
+      
+    }
+  }
+}

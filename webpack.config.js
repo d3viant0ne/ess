@@ -30,7 +30,7 @@ module.exports = {
             {
                 test: /\.scss$/,
                 exclude: /node_modules/,
-                loader: 'style-loader!css-loader?sourceMap!sass-loader?sourceMap!' + path.resolve('./assets/css/loader')
+                loader: 'style-loader!css-loader?sourceMap!resolve-url-loader?sourceMap!sass-loader?sourceMap!' + path.resolve('./assets/css/loader')
             },
             {
                 test: /\.html$/,
@@ -38,9 +38,10 @@ module.exports = {
                 loader: 'raw-loader'
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test    : /\.(png|jpg|svg)$/,
                 exclude: /node_modules/,
-                loaders: 'url-loader?name=[path][name].[ext]?limit:10000'
+                include : path.join(__dirname, './assets/images'),
+                loader  : 'resolve-url-loader?limit=30000&name=images/[path][name].[ext]'
             }
         ]
     },
