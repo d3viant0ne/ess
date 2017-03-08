@@ -1,0 +1,71 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: $body-bg-color;
+  height: 100%;
+}
+
+md-content {
+  flex: 1;
+  background: $body-bg-color;
+}
+
+
+
+.btn {
+  outline: none !important; 
+  text-decoration: none !important;
+  @include transition(all .4s ease);
+  
+  &-primary {
+    background: $color-blue;
+    border-color: $color-blue;
+    font-weight: bold;
+    
+    &:hover, &:focus, &:active {
+      background: $color-dark-blue;
+      border-color: $color-dark-blue;      
+    }
+  }
+}
+
+.md-button {
+  padding: 0 16px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+h2 {
+  color: $text-color-muted;
+  font-size: 12px;
+  margin: 0 0 15px;
+  font-weight: 500;
+}
+
+.text {
+  &-success {
+    color: #47aa63;
+  }
+  &-danger {
+    color: #d73737;
+  }
+}
+
+.padding {
+  &-15 {
+    padding: 15px;
+  }
+}
+
+
+
