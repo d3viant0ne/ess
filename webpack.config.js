@@ -11,6 +11,9 @@ module.exports = {
     devServer: {
         contentBase: 'public'
     },
+    resolve: {
+        extensions: ['.js', '.es6', 'html', 'scss']
+    },
     module: {
         loaders: [
             {
@@ -44,14 +47,5 @@ module.exports = {
                 loader  : 'resolve-url-loader?limit=30000&name=images/[path][name].[ext]'
             }
         ]
-    },
-    resolve: {
-        extensions: ['.js', '.es6', 'html', 'scss']
-    },
-    stats: {
-        colors: true,
-        modules: true,
-        reasons: true,
-        errorDetails: true
     }
 }
