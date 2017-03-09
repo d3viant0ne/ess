@@ -1,0 +1,41 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>My News</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>    
+  <div class="dashboard-panels dashboard-panels-flex">
+    <div class="dashboard-panel">
+      <a href="#" ng-click="showNews(message)">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/X1_PressRelease_500x250.jpg')"></div>
+        <h4>BMW USA News</h4>
+        <span class="count">8</span>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a href="#" ng-click="showNews(message)">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/BMW_Efficient_Dynamics1.jpg')"></div>
+        <h4>BMW Technology News</h4>
+        <span class="count">2</span>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a href="#" ng-click="showNews(message)">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/537275804.jpg')"></div>
+        <h4>Automotive IT News</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a href="#" ng-click="showNews(message)">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/158947043.jpg')"></div>
+        <h4>BMW Financial News</h4>
+        <span class="count">5</span>
+      </a>
+    </div>
+  </div>
+</md-content>

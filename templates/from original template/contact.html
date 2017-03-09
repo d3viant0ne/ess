@@ -1,0 +1,24 @@
+<ng-include src="'templates/partials/header-inner.html'"></ng-include>
+<md-content layout-padding class="has-header">
+ <form method="post" ng-submit="submitForm(postForm.$valid)" name="postForm" novalidate>
+ 	<md-input-container layout-padding>
+     <label>Name</label>
+     <input required ng-model="user.name" name="name" type="text">
+     <span class="warning-message-normal" ng-show="postForm.name.$invalid && postForm.name.$dirty">Required</span>
+   </md-input-container>
+   <md-input-container layout-padding>
+     <label>Email</label>
+     <input required type="email" ng-model="user.email" name="email">
+     <span class="warning-message-normal" ng-show="postForm.email.$error.required && postForm.email.$dirty">Required</span>
+     <span class="warning-message-normal" ng-show="postForm.email.$error.email && postForm.email.$dirty">This is not a valid email.</span>
+   </md-input-container>
+   <md-input-container layout-padding>
+     <label>Message</label>
+     <textarea required ng-model="user.details" name="details"></textarea>
+     <span class="warning-message-normal" ng-show="postForm.details.$invalid && postForm.details.$dirty">Required</span>
+   </md-input-container>
+   <md-input-container>
+      <md-button flex="100" ng-disabled="postForm.$invalid" md-ripple-size="full" class="md-raised md-primary">Send Message</md-button>
+   </md-input-container>
+ </form>
+</md-content>

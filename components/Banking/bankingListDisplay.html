@@ -1,0 +1,39 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back">
+        <i class="ion-android-arrow-back"></i>
+      </md-button>
+      <h2 md-header-title flex>My Banks</h2>
+      <md-button class="md-icon-button" ng-click="addMainBank();" ng-show="!hasMainBank">
+        <i class="ion-android-add"></i>
+      </md-button>
+      <md-button class="md-icon-button" ng-click="addOtherBank();" ng-show="hasMainBank">
+        <i class="ion-android-add"></i>
+      </md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+  <md-list>
+    <md-divider></md-divider>
+    <md-list-item class="md-3-line" ng-repeat="bank in employeeData.TBL_BANKDETAIL" ng-click="#/bankingForm/{{bank.KEY}}">
+      <div class="md-list-item-text">
+        <h3>{{bank.NAMEOFBANKKEY}}</h3>
+        <p>{{bank.ACCOUNTNO}}</p>
+        <p>{{bank.BANK_TYPE}}</p>
+      </div>
+      <md-divider></md-divider>
+    </md-list-item>
+  </md-list>
+</md-content>
+
+<!--
+<md-content layout-padding>
+    <md-list>
+         <md-button flex="100" md-ripple-size="full" ng-show="!hasMainBank" class="md-raised md-info" ng-click="addMainBank();">Add Main Bank</md-button>
+         <md-button flex="100" md-ripple-size="full" ng-show="hasMainBank" class="md-raised md-info" ng-click="addOtherBank();">Add Other Bank</md-button>
+   </md-list>
+</md-content>
+-->

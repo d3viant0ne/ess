@@ -1,0 +1,22 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>My Messages</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+  <md-list ng-repeat="message in messageList">
+    <md-list-item class="md-3-line" ng-click="showMessage(message)">
+      <img ng-src="img/bmw.png" class="md-avatar" style="height:40px"/>
+      <div class="md-list-item-text">
+        <h3>{{ message.name }}</h3>
+        <p>{{ message.priority }}</p>
+      </div>
+      <md-divider></md-divider>
+    </md-list-item>
+  </md-list>
+</md-content>

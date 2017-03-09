@@ -1,0 +1,61 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Week Summary - Jan 8-14</h2>
+      <md-button class="md-icon-button" aria-label="Spacer">&nbsp;</md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+
+  <md-list>
+    <!--<md-list-item ng-show="noHoursUsed == true">
+      <div class="md-list-item-text">
+        <p class="pull-left">{{message}}</p>
+      </div>
+    </md-list-item>
+    <div ng-repeat="item in usedAPTOList">
+    <md-list-item  >
+      <div class="md-list-item-text">
+        <p class="pull-left">{{item.DATUM}}</p>
+        <h3 class="pull-right text-danger">{{item.HOURS}} hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </div>-->
+
+
+
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Regular Hours</p>
+        <h3 class="pull-right">40 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Double Time</p>
+        <h3 class="pull-right">0 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Overtime</p>
+        <h3 class="pull-right">0 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Vacation</p>
+        <h3 class="pull-right">0 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-divider></md-divider>
+  </md-list>
+</md-content>

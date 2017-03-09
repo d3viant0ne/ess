@@ -1,0 +1,44 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Week Summary for {{weekName}}</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+
+  <md-list>
+    <div ng-repeat="item in weekSummary">
+    <md-list-item  >
+      <div class="md-list-item-text">
+        <p class="pull-left">{{item.LGTXT}}</p>
+        <h3 class="pull-right text-default">{{item.ANZHL}} hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </div>
+
+  <md-divider></md-divider>
+  <md-list>
+    <md-list-item style="background:#8e8e8e">
+      <div class="md-list-item-text">
+        <p class="pull-left" style="color:#fff">Clock Times</p>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <div ng-repeat="item in weekList">
+    <md-list-item  >
+      <div class="md-list-item-text">
+        <p class="pull-left">{{item.VALIDITYDATE}}</p>
+        <h3 class="pull-right text-default">{{item.CLOCK_IN}} to {{item.CLOCK_OUT}}</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </div>
+
+  </md-list>
+
+</md-content>

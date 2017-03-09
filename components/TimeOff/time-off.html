@@ -1,0 +1,99 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>my APTO</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+  <md-subheader class="md-sticky-no-effect">Associate Paid Time Off</md-subheader>
+  <md-list>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Annual Vacation</p>
+        <h3 class="pull-right">{{timeOffDetail.futureBalance}} hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Remaining</p>
+        <h3 class="pull-right text-success">{{timeOffDetail.remainingBalance}} hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item ng-click="goToApto()">
+      <div class="md-list-item-text">
+        <p class="pull-left">Used</p>
+        <h3 class="pull-right text-danger">{{timeOffDetail.used}} hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </md-list>
+  <md-subheader class="md-sticky-no-effect">Contingencies</md-subheader>
+  <md-list>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Total contingencies</p>
+        <h3 class="pull-right">3</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">Remaining</p>
+        <h3 class="pull-right text-success">3</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item ng-click="goToContingencies()">
+      <div class="md-list-item-text">
+        <p class="pull-left">Used</p>
+        <h3 class="pull-right text-danger">0</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </md-list>
+  <div class="padding-15">
+    <p class="text-muted"><strong>Balance Timing</strong>
+      <br>These balances may take up to 1 day to reflect recent activity.</p>
+  </div>
+</md-content>
+
+
+  <!--
+   <form name="userForm">
+      <md-input-container layout-padding>
+         <label>Time Off Type</label>
+         <md-select ng-model="user.leaveType">
+             <md-option value="Vacation">Vacation</md-option>
+             <md-option value="Vacation">Illness</md-option>
+             <md-option value="Vacation">Other</md-option>
+        </md-select>
+      </md-input-container>
+
+      <md-input-container layout-padding>
+          <label>From Date</label>
+          <input ng-model="user.leaveFromDate" placeholder="">
+      </md-input-container>
+
+      <md-input-container layout-padding>
+          <label>To Date</label>
+          <input ng-model="user.leaveToDate" placeholder="">
+      </md-input-container>
+
+      <md-input-container layout-padding>
+         <label>Description</label>
+         <input ng-model="user.leaveDescription" placeholder="">
+      </md-input-container>
+
+      <md-input-container>
+         <md-button flex="100" ng-disabled="postForm.$invalid" ng-click="submitTimeOffRequest()" md-ripple-size="full" class="md-raised md-primary">Submit Request</md-button>
+      </md-input-container>
+   </form>
+   -->

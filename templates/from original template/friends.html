@@ -1,0 +1,11 @@
+<ng-include src="'templates/partials/header.html'"></ng-include>
+<md-content layout="column" flex class="md-padding has-header">
+	<md-card>
+      <md-list>
+         <md-list-item ng-repeat="friend in friends" ng-click="goToProfile()">
+          	<img ng-src="{{ friend.image }}" class="md-avatar" />
+          	<p>{{ friend.title }}</p>
+         </md-list-item>
+   	</md-list>
+   </md-card>
+</md-content>

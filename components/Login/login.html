@@ -1,0 +1,26 @@
+<md-content class="login-alt">
+  <form name="projectForm">
+    <h1>Login to BMW my eServices</h1>
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Username" ng-model="login.email" autocomplete="off">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" placeholder="Password" ng-model="login.password" autocomplete="off">
+    </div>
+    <button class="btn btn-primary btn-block" ng-click="loginAccount();">Login</button>
+    <!--<md-button ng-click="loginAccount();" flex="100" md-ripple-size="full" class="md-raised md-primary">Login</md-button>-->
+  </form>
+  <img class="identity" src="assets/images/identity@2x.png">
+    <span style="position: absolute;bottom: 2px;left: 10px;">Version: {{appVersion}}</span>
+</md-content>
+
+<!--<md-content class="login">
+  <img src="assets/images/logo@2x.png" class="logo">
+  <form name="projectForm">
+    <h1>My eServices</h1>
+    <h2>Please login</h2>
+    <input type="text" class="form-control" placeholder="Username" ng-model="login.email" autocomplete="off">
+    <input type="password" class="form-control" placeholder="Password" ng-model="login.password" autocomplete="off">
+    <md-button ng-click="loginAccount();" flex="100" md-ripple-size="full" class="md-raised md-primary" style="background-color:#263b56">Login</md-button>
+  </form>
+</md-content>-->

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="eServices">
+<head>
+    <!--
+     Customize this policy to fit your own app's needs. For more guidance, see:
+     https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+     Some notes:
+     * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+     * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+     * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+     * Enable inline JS: add 'unsafe-inline' to default-src
+     -->
+
+    <meta content="IE=edge" http-equiv="x-ua-compatible">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta http-equiv="Content-Security-Policy" content="default-src * blob: 'self' gap: wss: ws: ; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+
+   <title>BMW</title>
+   <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+   <link rel="stylesheet" href="lib/ionic/css/ionicons.min.css">
+
+   <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/libs/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/app.css" rel="stylesheet">
+
+   <script src="node_modules/angular/angular.js"></script>
+   <script src="node_modules/angular-aria/angular-aria.js"></script>
+   <script src="node_modules/angular-animate/angular-animate.js"></script>
+   <script src="node_modules/angular-material/angular-material.js"></script>
+    <script src="assets/libs/ngStorage.min.js"></script>
+    <script src="assets/libs/angular-sanitize.js"></script>
+  <!-- Scripts for Odata and Base64 conversion for REST services -->
+    <script type="text/javascript" src="assets/libs/datajs-1.1.2.min.js"></script>
+    <script type="text/javascript" src="assets/libs/base64.js"></script>
+
+   <script src="lib/angular-ui-router.min.js"></script>
+   <!-- cordova script (this will be a 404 during development) -->
+   <script src="js/ng-cordova.min.js"></script>
+   <script src="cordova.js"></script>
+   <script src="js/controllers.js"></script>
+   <script src="js/push.js"></script>
+   <script src="js/data.js"></script>
+   <script src="js/router.js"></script>
+   <script src="js/directives.js"></script>
+   <script src="js/app.js"></script>
+   <!--<script src="js/ess/controllers.js"></script>-->
+
+    <script src="components/Dashboard/dashboardController.js"></script>
+    <script src="components/Time/timeController.js"></script>
+    <script src="components/Banking/bankingController.js"></script>
+    <script src="components/Pay/payController.js"></script>
+    <script src="components/Address/addressController.js"></script>
+    <script src="components/W4/w4Controller.js"></script>
+    <script src="components/AskHR/askHRController.js"></script>
+    <script src="components/TimeOff/timeOffController.js"></script>
+    <script src="components/AttendancePoints/attendancePointsController.js"></script>
+    <script src="components/Login/loginController.js"></script>
+    <script src="components/Profile/profileController.js"></script>
+    <script src="components/WorkSchedule/workScheduleController.js"></script>
+   <script src="js/ess/services.js"></script>
+    <script src="components/News/newsController.js"></script>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/libs/jquery-1.12.1/jquery-1.12.1.min.js"></script>
+    <script src="assets/libs/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+    <script src="js/pdf.compat.js"></script>
+    <script src="js/pdf.js"></script>
+    <script src="js/ng-pdfviewer.js"></script>
+    <!--<script src="js/test.js"></script>-->
+
+</head>
+<body>
+  <div ng-controller="MainCtrl" layout="column" class="ui-view-container" >
+    <div ui-view flex layout="column" style="height:100%"></div>
+    <md-progress-circular md-mode="indeterminate" ng-show="isLoading" style="z-index:999"></md-progress-circular>
+  </div>
+</body>
+
+</html>
