@@ -1,0 +1,19 @@
+{
+    "config": [{
+        "data": [{
+            "ApiUrl": "data/feed.json",
+            "PhotoUrl": "data/photos.json",
+            "CommentUrl": "data/comments.json",
+            "FriendsUrl": "data/friends.json",
+            "TestDataUrl": "data/testData.json"
+        }],
+        "contact": [{
+            "EmailId": "weblogtemplatesnet@gmail.com",
+            "ContactSubject": "Contact"
+        }],
+        "admob": [{
+            "interstitial": "ca-app-pub-3940256099942544/1033173712",
+            "banner": "ca-app-pub-3940256099942544/6300978111"
+        }]
+    }]
+}
