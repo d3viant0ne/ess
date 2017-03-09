@@ -1,0 +1,14 @@
+<ng-include src="'templates/partials/header-inner.html'"></ng-include>
+<md-content layout-padding class="has-header">
+   <form name="userForm">
+      <md-card ng-show="imageCamera">
+      	<img ng-src="{{imageCamera}}" class="md-card-image">
+      </md-card>
+      <md-button ng-show="type_file == 'file'" ng-click="getPhoto();" class="md-icon-button md-accent md-fab md-fab-bottom-right md-fab-fixed">
+        <i class="ion-ios-cloud-upload"></i>
+      </md-button>
+      <md-button ng-show="type_file == 'camera'" ng-click="getPhoto();" class="md-icon-button md-accent md-fab md-fab-bottom-right md-fab-fixed">
+        <i class="ion-ios-camera"></i>
+      </md-button>
+   </form>
+</md-content>

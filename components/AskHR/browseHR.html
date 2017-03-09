@@ -1,0 +1,25 @@
+<!--<ng-include src="'templates/partials/header-inner.html'"></ng-include>-->
+
+<header md-page-header>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+            <h2 md-header-title flex>Browse HR Docs </h2>
+            <md-button class="md-tools" aria-label="Add Ticket"><i class="ion-android-create" ng-click="createTicket();"></i></md-button>
+          </div>
+        </md-toolbar>
+
+</header>
+
+<md-content layout-padding>
+     
+    <md-list ng-repeat="subject in browseList">{{subject.name}}        
+      <md-list-item class="md-3-line" ng-repeat="link in subject.links | filter:{isaccessible:true}">
+        <div class="md-list-item-text">
+          <h3>{{link.name}}</h3>
+        </div>
+          <md-button class="" ng-click="showDocument(link)">View</md-button>
+      <md-divider></md-divider>
+      </md-list-item>
+    </md-list>
+</md-content>

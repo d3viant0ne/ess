@@ -1,0 +1,46 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goToDashboard()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>my Pay</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+<md-content>
+
+  <md-list>
+    <md-list-item ng-repeat="payroll in employeeData.TBL_PAYROLL_LIST" ng-click="showPayStatement(payroll.SEQUENCENUMBER)" ng-href="#/payrollDetail/{{payroll.SEQUENCENUMBER}}">
+      <div class="md-list-item-text">
+        <h3 class="pull-right text-success" style="font-weight: bold">${{payroll.NET_TOTAL}}</h3>
+        <h3>Pay date: {{payroll.PAYDATE_FORMAT}}</h3>
+        <p>From {{payroll.FPBEGIN_FORMAT}} to {{payroll.FPEND_FORMAT}}</p>
+      </div>
+      <md-divider></md-divider>
+    </md-list-item>
+  </md-list>
+
+      <!--
+      <div layout="column">
+        <md-card ng-repeat="payroll in employeeData.TBL_PAYROLL_LIST">
+        <md-card-title style="margin-left:20px">
+          <md-card-title-text>
+            <span class="md-subhead">Pay Date: {{payroll.PAYDATE_FORMAT}}</span>
+              <br>
+            <span class="md-subhead">From: {{payroll.FPBEGIN_FORMAT}} to {{payroll.FPEND_FORMAT}}</span>
+              <br>
+              <br>
+
+          </md-card-title-text>
+          <md-card-title-media>
+            <div class="md-media-md card-media"></div>
+          </md-card-title-media>
+        </md-card-title>
+        <md-card-actions layout="row" layout-align="end center" style="margin-top: -30px;">
+          <md-button ng-href="#/payrollDetail/{{payroll.SEQUENCENUMBER}}">Details</md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+    -->
+
+</md-content>

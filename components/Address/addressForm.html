@@ -1,0 +1,33 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Address</h2>
+      <md-button class="md-icon-button" ng-disabled="postForm.$invalid" ng-click="saveUpdate()">Save</md-button>
+    </div>
+  </md-toolbar>
+</header>
+<md-content layout-padding>
+  <form name="userForm">
+    <md-input-container layout-padding>
+       <label>Address</label>
+       <input ng-model="updatedAddress.STREETANDHOUSENO">
+    </md-input-container>
+    <md-input-container layout-padding>
+        <label>Address line 2</label>
+    	<input ng-model="updatedAddress.SCNDADDRESSLINE" placeholder="Address 2">
+    </md-input-container>
+    <md-input-container layout-padding>
+       <label>City</label>
+       <input ng-model="updatedAddress.CITY">
+    </md-input-container>
+    <md-input-container layout-padding>
+       <label>State</label>
+       <input ng-model="updatedAddress.STATE">
+    </md-input-container>
+    <md-input-container layout-padding>
+       <label>Postal Code</label>
+       <input ng-model="updatedAddress.POSTALCODECITY">
+    </md-input-container>
+  </form>
+</md-content>

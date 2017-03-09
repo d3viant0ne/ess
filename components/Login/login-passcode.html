@@ -1,0 +1,51 @@
+<md-content class="login login-passcode" ng-init="init()">
+  
+  <div class="login-passcode-inner">
+    <div class="user">
+      <img src="http://access.wftcloud.com:8059/sap/bc/contentserver/800?get&pVersion=0046&contRep=MA&docId=0018FE7972821EE0B3BA08926E988803&compId=data" class="avatar">
+      <p class="username">Jack Herbert</h1>
+      <p class="instructions">Enter passcode</h2>
+    </div>
+    <div class="login-passcode-inputs">
+      <span class="login-passcode-inputs-input">
+        <i ng-hide="passcode.substring(0, 1)">&#9675;</i>
+        <i ng-show="passcode.substring(0, 1)">&#9679;</i>
+      </span>
+      <span class="login-passcode-inputs-input">
+        <i ng-hide="passcode.substring(1, 2)">&#9675;</i>
+        <i ng-show="passcode.substring(1, 2)">&#9679;</i>
+      </span>
+      <span class="login-passcode-inputs-input">
+        <i ng-hide="passcode.substring(2, 3)">&#9675;</i>
+        <i ng-show="passcode.substring(2, 3)">&#9679;</i>
+      </span>
+      <span class="login-passcode-inputs-input">
+        <i ng-hide="passcode.substring(3, 4)">&#9675;</i>
+        <i ng-show="passcode.substring(3, 4)">&#9679;</i>
+      </span>
+    </div>
+    <div class="login-passcode-keypad">
+      <div class="row">
+        <button ng-click="add(1)">1<small class="text-muted">&nbsp;</small></button>
+        <button ng-click="add(2)">2<small class="text-muted">ABC</small></button>
+        <button ng-click="add(3)">3<small class="text-muted">DEF</small></button>
+      </div>
+      <div class="row">
+        <button ng-click="add(4)">4<small class="text-muted">GHI</small></button>
+        <button ng-click="add(5)">5<small class="text-muted">JKL</small></button>
+        <button ng-click="add(6)">6<small class="text-muted">MNO</small></button>
+      </div>
+      <div class="row">
+        <button ng-click="add(7)">7<small class="text-muted">PQRS</small></button>
+        <button ng-click="add(8)">8<small class="text-muted">TUV</small></button>
+        <button ng-click="add(9)">9<small class="text-muted">WXYZ</small></button>
+      </div>
+      <div class="row">
+        <button><small>Cancel</small></button>
+        <button ng-click="add(0)">0</button>
+        <button ng-click="delete()"><i class="ion-backspace-outline"></i></button>
+      </div>
+    </div>
+  </div>
+</md-content>
+

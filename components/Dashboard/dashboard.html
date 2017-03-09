@@ -1,0 +1,127 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" ng-href="#/profile" aria-label="Menu"><i class="ion-ios-person-outline"></i></md-button>
+
+      <h2 md-header-title flex>my eServices</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+
+  <div class="dashboard-welcome">
+    <img class="dashboard-welcome-avatar" src="{{employeeData.EMPLOYEE_PHOTO_URI}}" ng-show="employeeData.EMPLOYEE_PHOTO_URI">
+    <h1 class="dashboard-welcome-heading">Welcome {{employeeData.EMPLOYEE_DETAIL.NAME}}</h1>
+    <p class="dashboard-welcome-text">You have {{askHRItems}} pending items and {{messageList.length}} messages</p>
+  </div>
+
+<!-- non image version
+  <div class="dashboard-welcome" style="height:179px">
+    <h1 class="dashboard-welcome-heading" style="top:92px">Welcome {{employeeData.EMPLOYEE_DETAIL.NAME}}</h1>
+    <p class="dashboard-welcome-text" style="top:94px">You have {{askHRItems}} pending items and {{messageList.length}} messages</p>
+  </div>-->
+  <div class="dashboard-panels">
+    <div class="dashboard-panel">
+      <a ng-href="#/time-statement">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/clock.jpg')"></div>
+        <h4>my Time</h4>
+      </a>
+    </div>
+
+    <div class="dashboard-panel">
+      <a ng-href="#/workSchedule">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/BMW_Efficient_Dynamics1.jpg')"></div>
+        <h4>my Work Schedule</h4>
+      </a>
+    </div>
+
+    <div class="dashboard-panel">
+      <a ng-href="#/pay-statementList">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/504705052.jpg')"></div>
+        <h4>my Pay</h4>
+      </a>
+    </div>
+
+    <div class="dashboard-panel">
+      <a ng-href="#/timeOff">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/513313356.jpg')"></div>
+        <h4>my APTO</h4>
+      </a>
+    </div>
+
+    <div class="dashboard-panel">
+      <a ng-href="#/attendancePoints">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/158947043.jpg')"></div>
+        <h4>Attendance Points</h4>
+        <span class="count" ng-show="employeeData.TOTAL_ATTENDANCE_POINTS != '0'">{{employeeData.TOTAL_ATTENDANCE_POINTS}}</span>
+        <span class="count" style="background:#47aa63" ng-show="employeeData.TOTAL_ATTENDANCE_POINTS == '0'">{{employeeData.TOTAL_ATTENDANCE_POINTS}}</span>
+
+      </a>
+    </div>
+
+    <div class="dashboard-panel">
+      <a ng-href="#/askHRDashboard">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/512056034.jpg')"></div>
+        <h4>Ask HR</h4>
+        <span class="count" ng-show="askHRItems > 0">{{askHRItems}}</span>
+      </a>
+    </div>
+
+    <div class="dashboard-panel">
+      <a ng-href="#/myMessages">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/527045000.jpg')"></div>
+        <h4>Alerts</h4>
+        <span class="count" ng-show="messageList.length > 0">{{messageList.length}}</span>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="#/news">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/514228956.jpg')"></div>
+        <h4>My News</h4>
+      </a>
+    </div>
+<!--
+    <div class="dashboard-panel">
+      <a ng-href="#/bankingList">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/148225641.jpg')"></div>
+        <h4>Banking</h4>
+      </a>
+    </div>
+
+    <div class="dashboard-panel">
+      <a href="#/w4Form">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/158947043.jpg')"></div>
+        <h4>W-4</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="#/addressForm">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/178505652.jpg')"></div>
+        <h4>Address</h4>
+      </a>
+    </div>
+
+
+    <div class="dashboard-panel">
+      <a ng-href="#/lifeEvents">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/176898383.jpg')"></div>
+        <h4>Life Events</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="#/myMessages">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/527045000.jpg')"></div>
+        <h4>Alerts</h4>
+        <span class="count" ng-show="messageList.length > 0">{{messageList.length}}</span>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="#/news">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/514228956.jpg')"></div>
+        <h4>My News</h4>
+      </a>
+    </div>-->
+  </div>
+</md-content>

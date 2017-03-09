@@ -1,0 +1,36 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Getting Married</h2>
+      <md-button class="md-icon-button" aria-label="Spacer">&nbsp;</md-button>
+    </div>
+  </md-toolbar>
+</header>
+<div class="dashboard-welcome">
+  <h1 class="dashboard-welcome-heading">Congratulations {{employeeData.EMPLOYEE_DETAIL.NAME}}!</h1>
+  <p class="dashboard-welcome-text">We are very happy for you and your spouse.  Often getting married can necessitate a few adjustments to your personnel information.  Please review the items below and complete them if they are relevant to your situation.</p>
+</div>
+<md-content>
+
+  <div class="dashboard-panels">
+    <div class="dashboard-panel">
+      <a ng-href="#/addressForm">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/494765544.jpg')"></div>
+        <h4>Update your address</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="#/bankingList">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/148225641.jpg')"></div>
+        <h4>Update your bank information</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="#/w4Form">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/158947043.jpg')"></div>
+        <h4>Update your tax withholdings (W-4)</h4>
+      </a>
+    </div>
+  </div>
+</md-content>

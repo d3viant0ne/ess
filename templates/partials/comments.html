@@ -1,0 +1,14 @@
+<md-list>
+	<md-divider ></md-divider>
+	<md-list-item class="md-3-line">
+   	<h3>Comments</h3>
+   </md-list-item>
+	<md-divider ></md-divider>
+	<md-list-item ng-repeat="comment in comments" class="md-3-line">
+     <img ng-src="{{ user.userImage }}" class="md-avatar"  />
+     <div class="md-list-item-text">
+       <h3>{{ user.username }}</h3>
+       <p>{{comment.comment}}</p>
+     </div>
+   </md-list-item>
+</md-list>
