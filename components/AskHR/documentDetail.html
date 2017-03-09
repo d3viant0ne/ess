@@ -1,0 +1,44 @@
+<header md-page-header>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+            <h2 md-header-title flex>{{documentDetail.topicName}}</h2>
+          </div>
+        </md-toolbar>
+
+</header>
+<md-content layout-padding>
+    
+    <!--<div class="text-center container" ng-show="isPdf == true">
+        <div class="row">
+            <div class="btn-group">
+                <button class="btn" ng-click="gotoPage(1)">|&lt;</button>
+                <button class="btn" ng-click="prevPage()">&lt;</button>
+                <button class="btn" ng-click="nextPage()">&gt;</button>
+                <button class="btn" ng-click="gotoPage(totalPages)">&gt;|</button>
+            </div>
+        </div>
+        <div class="row">
+            <span class="label" ng-show="totalPages">{{currentPage}}/{{totalPages}}</span>
+        </div>
+        <div class="row">
+            <pdfviewer src="{{pdfURL}}" on-page-load='pageLoaded(page,total)' id="viewer" load-progress='loadProgress(loaded, total, state)'></pdfviewer>
+        </div>
+    </div>-->
+
+   <!--<div id="holder"></div>-->
+<div class="text-center container" ng-show="isPdf == true">
+        <div class="row">
+         <img ng-src="https://dl.dropboxusercontent.com/u/74710899/BMW/files/12%20Hour%20Shift%20160%20Benefit.png">   
+        </div>
+    </div>
+                
+
+    <div id="documentHeader" ng-show="isPdf != true"><h2>{{documentDetail.topicName}}</h2></div>
+
+    <div id="documentBody" ng-show="isPdf != true"></div>
+            
+</md-content>
+
+
+

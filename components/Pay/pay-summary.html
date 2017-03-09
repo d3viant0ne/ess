@@ -1,0 +1,110 @@
+<md-content>
+    <div class="pay">
+
+    <nav class="navbar">
+      <button class="btn btn-link btn-left btn-back" ng-click="goBack();">
+        <img src="assets/images/arrow-left-white@2x.png">
+        Back
+      </button>
+      <h1 class="navbar-title">Year to Date Pay Summary</h1>
+    </nav> 
+
+    <div class="month-picker">
+      <button class="btn btn-link btn-prev">
+        <img src="assets/images/arrow-left-blue@2x.png">
+      </button>
+      <h3>2016 Calendar Year</h3>
+
+    </div>
+    
+        <div class="dashboard-links">
+          <a ng-href="#/time-statement">
+            <span class="icon"><span class="pay-table-row-value text-info">$21,093.71</span></span>
+            <h3 class="panel-title">Gross YTD Earnings</h3>
+          </a>
+          <a ng-href="#/time-statement">
+            <span class="icon"><span class="pay-table-row-value text-success">$21,093.71</span></span>
+            <h3 class="panel-title">Net YTD Earnings</h3>
+          </a>
+        </div>
+        
+            
+    <div class="pay-table">
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-1">
+        <span class="pay-table-row-title">Gross Wages Year to Date</span>
+        <span class="pay-table-row-value text-success">$24,980.00</span>
+      </div>
+      <div class="collapse pay-detail" id="pay-detail-1">
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Base Salary</span>
+          <span class="pay-table-row-value text-danger">$22,280.00</span>          
+        </div>
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Overtime</span>
+          <span class="pay-table-row-value text-danger">$2,700</span>          
+        </div>
+      </div>
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-2">
+        <span class="pay-table-row-title">YTD Tax Exempt Deductions</span>
+        <span class="pay-table-row-value text-danger">$229.50</span>
+      </div>
+      <div class="collapse pay-detail" id="pay-detail-2">
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Health Insurance</span>
+          <span class="pay-table-row-value text-danger">$229.50</span>          
+        </div>
+      </div>
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-3">
+        <span class="pay-table-row-title">YTD Taxes</span>
+        <span class="pay-table-row-value text-danger">$2,307.19</span>
+      </div>
+      <div class="collapse pay-detail" id="pay-detail-3">
+        <div class="pay-table-row pay-table-row-subheading">
+          <span class="pay-table-row-title">YTD Federal</span>
+        </div>
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Withholding Tax</span>
+          <span class="pay-table-row-value text-danger">$1,723.76</span>          
+        </div>
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Social Security</span>
+          <span class="pay-table-row-value text-danger">$119.09</span>          
+        </div>
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Medicare Tax</span>
+          <span class="pay-table-row-value text-danger">$235.67</span>          
+        </div>
+        <div class="pay-table-row pay-table-row-subheading">
+          <span class="pay-table-row-title">YTD State</span>
+        </div>
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Withholding Tax</span>
+          <span class="pay-table-row-value text-danger">$128.18</span>          
+        </div>
+      </div>
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-4">
+        <span class="pay-table-row-title">YTD Non Tax Exempt Deductions</span>
+        <span class="pay-table-row-value text-danger">$148.50</span>
+      </div>
+      <div class="collapse pay-detail" id="pay-detail-4">
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Supplemental Life Insurance</span>
+          <span class="pay-table-row-value text-danger">$30.00</span>          
+        </div>
+        <div class="pay-table-row">
+          <span class="pay-table-row-title">YTD Union Dues</span>
+          <span class="pay-table-row-value text-danger">$118.50</span>          
+        </div>
+      </div>
+      <div class="pay-table-row pay-table-row-totals" style="color:green">
+        <span class="pay-table-row-title text-success">YTD Net Pay</span>
+        <span class="pay-table-row-value">$21,093.71</span>
+      </div>
+    </div>
+
+        <div class="panel-footer">
+          <a href="#" class="btn btn-link btn-block">See Monthly Pay Statements</a>
+        </div>
+        
+  </div>
+</md-content>

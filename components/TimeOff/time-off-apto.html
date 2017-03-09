@@ -1,0 +1,92 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Used APTO</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+
+  <md-list>
+    <md-list-item ng-show="noHoursUsed == true">
+      <div class="md-list-item-text">
+        <p class="pull-left">{{message}}</p>
+      </div>
+    </md-list-item>
+    <div ng-repeat="item in usedAPTOList">
+    <md-list-item  >
+      <div class="md-list-item-text">
+        <p class="pull-left">{{item.DATUM}}</p>
+        <h3 class="pull-right text-danger">{{item.HOURS}} hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </div>
+    <!--<md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">7/12/2016</p>
+        <h3 class="pull-right text-danger">8 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">12/11/2016</p>
+        <h3 class="pull-right text-danger">4 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">7/11/2016</p>
+        <h3 class="pull-right text-danger">8 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">12/10/2016</p>
+        <h3 class="pull-right text-danger">4 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">7/10/2016</p>
+        <h3 class="pull-right text-danger">8 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">12/9/2016</p>
+        <h3 class="pull-right text-danger">4 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">7/9/2016</p>
+        <h3 class="pull-right text-danger">8 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">12/8/2016</p>
+        <h3 class="pull-right text-danger">4 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+    <md-list-item>
+      <div class="md-list-item-text">
+        <p class="pull-left">7/8/2016</p>
+        <h3 class="pull-right text-danger">8 hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>-->
+  </md-list>
+</md-content>

@@ -1,0 +1,46 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>{{title_head}}</h2>
+      <md-button class="md-tools" aria-label="Edit"><i class="ion-android-create" ng-click="editBank();"></i></md-button>
+      <!--<md-button class="md-tools" aria-label="More"><i class="ion-android-more-vertical"></i></md-button>-->
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content layout-padding>
+        
+   <form name="userForm">
+           <md-input-container layout-padding>
+             <label>Bank Name</label>
+             <input ng-model="updatedBank.NAMEOFBANKKEY" readonly>
+           </md-input-container>
+       
+      <md-input-container layout-padding>
+          <label>Bank Type</label>
+      	<input ng-model="updatedBank.BANK_TYPE" placeholder="Bank Type" readonly>
+      </md-input-container>
+       
+      <md-input-container layout-padding>
+          <label>Routing Number</label>
+      	<input ng-model="updatedBank.BANKKEY" placeholder="Routing Number" readonly>
+      </md-input-container>
+     
+      <md-input-container layout-padding>
+          <label>Account Number</label>
+      	<input ng-model="updatedBank.ACCOUNTNO" placeholder="Account Number" readonly>
+      </md-input-container>
+       
+      <md-input-container layout-padding ng-if="updatedBank.BANKTYPE != '0'">
+         <label>Percent</label>
+         <input ng-model="updatedBank.STANDARDPERCENT" placeholder="Deposit %" readonly>
+      </md-input-container>
+
+      <md-input-container layout-padding  ng-if="updatedBank.BANKTYPE != '0'">
+         <label>Amount</label>
+         <input ng-model="updatedBank.STANDARDVALUE" placeholder="Amount $" readonly>
+      </md-input-container>
+
+   </form>
+</md-content>

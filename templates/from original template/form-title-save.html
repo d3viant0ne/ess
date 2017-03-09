@@ -1,0 +1,18 @@
+<ng-include src="'templates/partials/header-inner-save.html'"></ng-include>
+<md-content layout-padding class="has-header">
+   <form name="userForm">
+      <md-input-container layout-padding>
+         <label>First Name</label>
+         <input ng-model="user.fname">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>Last Name</label>
+         <input ng-model="user.lname">
+      </md-input-container>
+      
+      <md-input-container layout-padding>
+         <label>Email</label>
+         <input ng-model="user.email" type="email">
+      </md-input-container>
+   </form>
+</md-content>

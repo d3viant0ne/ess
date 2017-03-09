@@ -1,0 +1,120 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Ask HR</h2>
+      <!--<md-button class="md-icon-button" aria-label="Spacer">&nbsp;</md-button>-->
+      <md-button class="md-icon-button" aria-label="Add"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+  <div class="dashboard-panels dashboard-panels-flex">
+    <div class="dashboard-panel">
+      <a ng-href="#/askHR">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/506340512.jpg')"></div>
+        <h4>My Tickets</h4>
+      </a>
+    </div>
+    <!--
+    <div class="dashboard-panel">
+      <a ng-href="#/ticketCreate">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/519624386.jpg')"></div>
+        <h4>Create ticket</h4>
+      </a>
+    </div>
+    -->
+    <div class="dashboard-panel">
+      <a ng-href="#/browseHR">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/466144261.jpg')"></div>
+        <h4>HR Documents</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="http://www.adp.com">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/158947043.jpg')"></div>
+        <h4>My Benefits</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/X1_PressRelease_500x250.jpg')"></div>
+        <h4>Useful Links</h4>
+      </a>
+    </div>
+    <!--
+    <div class="dashboard-panel">
+      <a ng-href="http://www.bmw.com">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/494765544.jpg')"></div>
+        <h4>BMW Home</h4>
+      </a>
+    </div>
+    <div class="dashboard-panel">
+      <a ng-href="http://www.bmwusa.com">
+        <div class="dashboard-panel-image" style="background-image:url('assets/images/dashboard-panels/494765544.jpg')"></div>
+        <h4>BMW USA</h4>
+      </a>
+    </div>
+    -->
+  </div>
+</md-content>
+
+
+<!--
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Ask HR</h2>
+    </div>
+  </md-toolbar>
+</header>
+-->
+
+<!--
+<md-content>
+      <div class="dashboard">
+
+        <nav class="navbar">
+          <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back" style="color:white; position: absolute;"><i class="ion-android-arrow-back"></i></md-button>
+          <h1 class="navbar-title">Ask HR</h1>
+        </nav>
+
+
+        <div class="dashboard-profile">
+            <img src="{{employeeData.EMPLOYEE_PHOTO_URI}}">
+          <h1>Welcome to Ask HR</h1>
+          <h2>We are very happy to assist you with your HR needs.  Please find below a series of links that should be useful, as well as the ability to submit a HR request via Ask HR.</h2>
+        </div>
+
+        <div class="dashboard-links">
+          <a ng-href="#/askHR">
+            <span class="icon"><i class="ion-help-circled"></i></span>
+            My Tickets
+            <span class="count" ng-show="askHRItems > 0">{{askHRItems}}</span>
+          </a>
+          <a ng-href="#/ticketCreate">
+            <span class="icon"><i class="ion-plus-circled"></i></span>
+            Create Ticket
+          </a>
+          <a ng-href="#/browseHR">
+            <span class="icon"><i class="ion-ios-bookmarks"></i></span>
+            HR Documents
+          </a>
+          <a href="http://www.adp.com">
+            <span class="icon"><i class="ion-heart"></i></span>
+            My Benefits
+          </a>
+          <a href="http://www.bmw.com">
+            <span class="icon"><i class="ion-android-car"></i></span>
+            BMW Home
+          </a>
+          <a href="http://www.bmwusa.com">
+            <span class="icon"><i class="ion-model-s"></i></span>
+            BMW USA
+          </a>
+        </div>
+</div>
+</md-content>
+-->

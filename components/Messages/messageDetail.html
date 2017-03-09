@@ -1,0 +1,24 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>{{messageDetail.name}}</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+<md-content layout-padding>
+  <div id="documentHeader">
+    <h1>{{messageDetail.name}}</h1>
+  </div>
+  <div id="documentBody">
+    <p>{{messageDetail.description}}</p>
+    <hr>
+    <p class="text-muted">Priority: {{messageDetail.priority}}</p>
+    <p class="text-muted">Target: {{messageDetail.target}}</p>
+    <p class="text-muted">Author: {{messageDetail.author}}</p>
+  </div>
+</md-content>
+
+
+

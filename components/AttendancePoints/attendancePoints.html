@@ -1,0 +1,46 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>Attendance Points</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+  <md-subheader class="md-sticky-no-effect">Attendance Points</md-subheader>
+  <md-list>
+    <md-divider></md-divider>
+    <md-list-item ng-click="goToAttendancePoints()">
+      <div class="md-list-item-text">
+        <p class="pull-left">Attendance Points</p>
+        <h3 class="pull-right">{{employeeData.TOTAL_ATTENDANCE_POINTS}}</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </md-list>
+
+  <md-subheader class="md-sticky-no-effect">Detail</md-subheader>
+  <md-list>
+    <md-list-item ng-show="noAttendancePointsUsed == true">
+      <div class="md-list-item-text">
+        <p class="pull-left">{{message}}</p>
+      </div>
+    </md-list-item>
+    <div ng-repeat="item in attendancePointList">
+    <md-list-item  >
+      <div class="md-list-item-text">
+        <p class="pull-left">{{item.DATUM}}</p>
+        <h3 class="pull-right text-danger">{{item.HOURS}} hours</h3>
+      </div>
+    </md-list-item>
+    <md-divider></md-divider>
+  </div>
+  </md-list>
+
+  <div class="padding-15">
+    <p class="text-muted"><strong>Balance Timing</strong>
+      <br>These balances may take up to 1 day to reflect recent activity.</p>
+  </div>
+</md-content>

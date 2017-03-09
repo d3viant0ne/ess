@@ -1,0 +1,16 @@
+<ng-include src="'templates/partials/header-inner.html'"></ng-include>
+<md-content layout-padding class="has-header">
+ 	<form name="projectForm">
+   	<md-input-container layout-padding>
+     		<label>Email</label>
+     		<input name="login" type="email" ng-model="login.email">
+   	</md-input-container>
+   	<md-input-container layout-padding>
+     		<label>Password</label>
+     		<input name="password" type="password" ng-model="login.password">
+   	</md-input-container>
+   	<md-input-container>
+      	<md-button ng-click="loginAccount();" flex="100" md-ripple-size="full" class="md-raised md-primary">Login</md-button>
+   	</md-input-container>
+ 	</form>
+</md-content>

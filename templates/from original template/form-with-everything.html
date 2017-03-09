@@ -1,0 +1,83 @@
+<ng-include src="'templates/partials/header-inner.html'"></ng-include>
+<md-content layout-padding class="has-header">
+   <form name="userForm">
+      <md-input-container layout-padding>
+         <label>First Name</label>
+         <input ng-model="user.fname">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>Last Name</label>
+         <input ng-model="user.lname">
+      </md-input-container>
+      
+      <md-input-container layout-padding>
+         <label>Email</label>
+         <input ng-model="user.email" type="email">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>Company</label>
+         <input ng-model="user.company">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <md-select name="myModel" placeholder="Select Position" ng-model="myModel" required>
+           <md-option value="1">Manager</md-option>
+           <md-option value="2">Developer</md-option>
+         </md-select>
+         <div class="errors" ng-messages="myForm.myModel.$error" ng-if="myForm.$dirty">
+           <div ng-message="required">Required</div>
+         </div>
+    	</md-input-container>
+      <md-input-container layout-padding>
+         <label>Date</label>
+         <input type="date" ng-model="user.submissionDate">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>Address</label>
+         <input ng-model="user.address">
+      </md-input-container>
+      <md-input-container md-no-float layout-padding>
+      	<input ng-model="user.address2" placeholder="Address 2">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>City</label>
+         <input ng-model="user.city">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>State</label>
+         <input ng-model="user.state">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>Postal Code</label>
+         <input ng-model="user.postalCode">
+      </md-input-container>
+      <md-input-container layout-padding>
+         <label>Biography</label>
+         <textarea ng-model="user.biography" columns="1" md-maxlength="150"></textarea>
+      </md-input-container>
+      <md-input-container layout-padding>
+      	<md-radio-group ng-model="data.group1">
+         	<md-radio-button value="male" class="md-primary"> Cool </md-radio-button>
+         	<md-radio-button value="female"> Nice </md-radio-button>
+       	</md-radio-group>
+      </md-input-container>
+      
+      <md-list>
+      	<md-list-item>
+         	<md-checkbox class="md-secondary"></md-checkbox>
+          	<p> Agree Terms and conditions? </p>
+          
+        </md-list-item>
+        <md-list-item>
+        		<md-switch class="md-secondary"></md-switch>
+          	<p> Example switch </p>
+          
+        </md-list-item>
+      </md-list>
+      <md-input-container>
+         <md-button flex="100" ng-disabled="postForm.$invalid" md-ripple-size="full" class="md-raised md-primary">Submit</md-button>
+      </md-input-container>
+      <md-button class="md-icon-button md-accent md-fab md-fab-bottom-right md-fab-fixed">
+        <i class="ion-ios-paperplane-outline"></i>
+      </md-button>
+   </form>
+</md-content>

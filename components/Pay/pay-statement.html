@@ -1,0 +1,109 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <md-button ng-href="#/pay-statementList" class="md-icon-button" aria-label="Go Back">
+        <i class="ion-android-arrow-back"></i>
+      </md-button>
+      <h2 md-header-title flex>my Pay</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content layout-padding>
+    <div class="pay">
+
+    <div class="month-picker">
+      <md-button class="md-icon-button" ng-href="#/payrollDetail/{{prevStatementId}}">
+        <i class="ion-android-arrow-back"></i>
+      </md-button>
+      <h3>Pay Date: {{payStatement.PAYDATE_FORMAT}}</h3>
+      <md-button class="md-icon-button" ng-href="#/payrollDetail/{{nextStatementId}}">
+        <i class="ion-android-arrow-forward"></i>
+      </md-button>
+    </div>
+
+    <div class="pay-table">
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-1">
+        <span class="pay-table-row-title">Gross</span>
+        <span class="pay-table-row-value text-info">${{payStatement.Gross | number : 2}}</span>
+      </div>
+
+      <div class="collapse pay-detail" id="pay-detail-1">
+        <div class="pay-table-row" ng-repeat="item in payStatementItems | filter:{ CATEGORY: 'WAGES' }">
+          <span class="pay-table-row-title">{{item.WAGE_TYPE_TEXT}} <span ng-if="item.HOURS != '0.00'">({{item.HOURS}} hrs @ ${{item.RATE}})</span></span>
+          <span class="pay-table-row-value text-danger">${{item.AMOUNT}}</span>
+        </div>
+      </div>
+
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-2">
+        <span class="pay-table-row-title">Deductions</span>
+        <span class="pay-table-row-value text-danger">${{payStatement.Deductions | number : 2}}</span>
+      </div>
+      <div class="collapse pay-detail" id="pay-detail-2">
+        <div class="pay-table-row" ng-repeat="item in payStatementItems | filter:{ CATEGORY: 'PRETAXDED' }">
+          <span class="pay-table-row-title">{{item.WAGE_TYPE_TEXT}}</span>
+          <span class="pay-table-row-value text-danger">${{item.AMOUNT}}</span>
+        </div>
+      </div>
+
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-3">
+        <span class="pay-table-row-title">Taxes</span>
+        <span class="pay-table-row-value text-danger">${{payStatement.Taxes | number : 2}}</span>
+      </div>
+
+      <div class="collapse pay-detail" id="pay-detail-3">
+        <div class="pay-table-row" ng-repeat="item in payStatementItems | filter:{ CATEGORY: 'TAXES' }">
+          <span class="pay-table-row-title">{{item.WAGE_TYPE_TEXT}}</span>
+          <span class="pay-table-row-value text-danger">${{item.AMOUNT}}</span>
+        </div>
+      </div>
+
+      <!--<div class="pay-table-row pay-table-row-totals">-->
+     <!--<div class="pay-table-row">
+        <span class="pay-table-row-title text-success">Net Payment</span>
+        <span class="pay-table-row-value text-success">${{payStatement.Net | number : 2}}</span>
+      </div>-->
+
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-4">
+        <span class="pay-table-row-title text-success">Net Payment</span>
+        <span class="pay-table-row-value text-success">${{payStatement.Net | number : 2}}</span>
+      </div>
+      <div class="collapse pay-detail" id="pay-detail-4">
+        <div class="pay-table-row" ng-repeat="item in payStatementItems | filter:{ CATEGORY: 'NET_TOTAL' }">
+          <span class="pay-table-row-title">{{item.WAGE_TYPE_TEXT}}</span>
+          <span class="pay-table-row-value text-info">${{item.AMOUNT}}</span>
+        </div>
+      </div>
+
+
+      <div class="pay-table-row toggle collapsed" data-toggle="collapse" data-target="#pay-detail-5">
+        <span class="pay-table-row-title">Other Information</span>
+        <!--<span class="pay-table-row-value text-danger">${{payStatement.Benefits | number : 2}}</span>-->
+      </div>
+      <div class="collapse pay-detail" id="pay-detail-5">
+        <div class="pay-table-row" ng-repeat="item in payStatementItems | filter:{ CATEGORY: 'BENEFITS' }">
+          <span class="pay-table-row-title">{{item.WAGE_TYPE_TEXT}}</span>
+          <span class="pay-table-row-value text-info">${{item.AMOUNT}}</span>
+        </div>
+      </div>
+
+    </div>
+
+
+        <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Pay Period: {{payStatement.FPBEGIN_FORMAT}} to {{payStatement.FPEND_FORMAT}}</h3>
+        </div>
+
+        <!--<div class="panel-body">
+          <h3 class="panel-title">Year to Date Gross Pay</h3><span class="dashboard-pay text-success">$23,456</span>
+        </div>-->
+        <!--<div class="panel-body">
+          <h3 class="panel-title">Next Pay Check</h3><span class="dashboard-pay text-success">$23,456</span>
+        </div>-->
+
+      </div>
+
+  </div>
+</md-content>

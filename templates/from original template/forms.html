@@ -1,0 +1,4 @@
+<ng-include src="'templates/partials/header.html'"></ng-include>
+<md-content layout="column" flex class="md-padding has-header">
+	<md-button ng-href="#/{{ form.url }}" ng-repeat="form in forms.items" class="md-raised md-warn">{{ form.name }}</md-button>
+</md-content>

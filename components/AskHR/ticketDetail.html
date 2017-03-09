@@ -1,0 +1,69 @@
+<header md-page-header>
+        <md-toolbar>
+          <div class="md-toolbar-tools">
+            <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+            <h2 md-header-title flex>{{ticketDetail.subject}}</h2>
+            <!--<md-button class="md-tools" aria-label="Add Note"><i class="ion-android-create" ng-click="addNotes();"></i></md-button>
+            <md-button class="md-tools" aria-label="Add Attachment"><i class="ion-android-create" ng-click="addAttachment();"></i></md-button>-->
+          </div>
+        </md-toolbar>
+
+</header>
+<md-content layout-padding>
+        
+   <form name="ticketForm">
+       <md-input-container layout-padding>
+         <label>Subject</label>
+         <input ng-model="ticketDetail.subject" readonly>
+       </md-input-container>
+       
+      <md-input-container layout-padding>
+          <label>Status</label>
+      	<input ng-model="ticketDetail.status" readonly>
+      </md-input-container>
+       
+      <md-input-container layout-padding>
+          <label>Topic</label>
+      	<input ng-model="ticketDetail.topicName" readonly>
+      </md-input-container>
+       
+      <md-input-container layout-padding>
+          <label>Issue</label>
+      	<input ng-model="ticketDetail.details" readonly>
+      </md-input-container>
+       
+      <md-input-container layout-padding>
+         <label>Last Update Time</label>
+         <input ng-model="ticketDetail.lastEditDateTime" readonly>
+      </md-input-container>
+
+      <md-input-container layout-padding>
+         <label>Create Date</label>
+         <input ng-model="ticketDetail.creationDateTime" readonly>
+      </md-input-container>
+
+   </form>
+    
+    <md-list><b><small>Notes</small></b>
+      <md-list-item class="md-3-line" ng-repeat="note in ticketNotes">
+        <div class="md-list-item-text">
+          <h4>{{note.note}}</h4>
+          <h5><small>added by {{note.user}} on {{note.date}}</small></h5>
+          <p></p>
+        </div>
+        <md-button class="" ng-href="{{note.attachmentUrl}}">View</md-button>
+      </md-list-item>
+    </md-list>
+    
+    <md-list><b><small>Attachments</small></b>
+      <md-list-item class="md-3-line" ng-repeat="attachment in ticketAttachments">
+        <div class="md-list-item-text">
+          <h4>{{attachment.attachment}}</h4>
+          <h5><small>uploaded by {{attachment.user}} on {{attachment.date}}</small></h5>
+          <p></p>
+        </div>
+        <md-button class="" ng-href="{{attachment.attachmentUrl}}">View</md-button>
+      </md-list-item>
+    </md-list>
+    
+</md-content>

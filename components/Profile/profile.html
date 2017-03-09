@@ -1,0 +1,57 @@
+<header md-page-header>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+     <md-button ng-click="goBackSingle()" class="md-icon-button" aria-label="Go Back"><i class="ion-android-arrow-back"></i></md-button>
+      <h2 md-header-title flex>my Profile</h2>
+      <md-button class="md-icon-button" aria-label="Help"><i class="ion-ios-help-outline"></i></md-button>
+    </div>
+  </md-toolbar>
+</header>
+
+<md-content>
+
+  <div class="dashboard-welcome" style="height:179px">
+    <h1 class="dashboard-welcome-heading" style="top:92px">Welcome {{employeeData.EMPLOYEE_DETAIL.NAME}}</h1>
+  </div>
+  <div style="background:#fff" style="overflow: hidden;">
+
+      <md-input-container layout-padding layout-margin>
+         <label>Email</label>
+         <input ng-model="user.email" type="email" readonly>
+      </md-input-container>
+
+      <md-input-container layout-padding layout-margin>
+         <label>Mobile Phone</label>
+         <input ng-model="user.phone" type="phone">
+      </md-input-container>
+
+      <md-list>
+
+        <md-list-item>
+            <md-switch class="md-secondary md-primary"></md-switch>
+          	<p> Receive Emergency Alerts via Text Messages?</p>
+        </md-list-item>
+
+        <md-list-item>
+            <md-switch class="md-secondary md-primary"></md-switch>
+          	<p> Receive Attendance Points Alerts via Text Messages?</p>
+        </md-list-item>
+
+        <md-list-item>
+            <md-switch class="md-secondary md-primary"></md-switch>
+          	<p> Receive eService Alerts via Text Messages?</p>
+        </md-list-item>
+
+
+        <md-list-item>
+              <button flex="100"  md-no-ink class="md-primary">Review Terms and Conditions</button>
+        </md-list-item>
+
+        <md-list-item>
+          <button class="btn btn-primary btn-block" ng-click="saveChanges();" tabindex="0">Save</button>
+        </md-list-item>
+
+      </md-list>
+  </div>
+
+</md-content>

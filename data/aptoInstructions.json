@@ -1,0 +1,17 @@
+[
+  {
+    "_id": 1,
+    "title": "Reminder",
+	 "text": "Contingencies are part of your regular APTO, not separate.  Please ask your supervisor if you have any questions or issues with your balances."
+  },
+  {
+    "_id": 2,
+    "title": "Balance Timing",
+	 "text": "These balances may take up to 1 day to reflect recent activity."
+  },
+  {
+    "_id": 3,
+    "title": "Help",
+	 "text": "Touch any of the 'used' balances to see specific dates/times taken."
+  },
+]

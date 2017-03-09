@@ -1,0 +1,26 @@
+<ng-include src="'templates/partials/header-inner.html'"></ng-include>
+<md-content layout="column" flex class="md-padding has-header">
+	<md-card>
+      <md-list>
+         <md-list-item ng-click="goToProfile()">
+          	<img alt="{{ user.username }}" ng-src="{{ user.userImage }}" class="md-avatar" />
+          	<p>{{ user.username }}</p>
+         </md-list-item>
+   	</md-list>
+     	<img ng-src="{{myPost.image}}" class="md-card-image" alt="{{myPost.title}}">
+      <md-list class="comment_box">
+         <md-list-item layout-align="end center">
+            <md-button ng-show="liked" ng-click="likeThisPost(true)" class="md-icon-button icon-red" aria-label="More">
+              <i class="ion-ios-heart-outline"></i>
+            </md-button>
+            <md-button ng-hide="liked" ng-click="likeThisPost(false)" class="md-icon-button icon-red" aria-label="More">
+              <i class="ion-ios-heart"></i>
+            </md-button>
+            <md-button ng-click="getToComments()" class="md-icon-button" aria-label="More">
+              <i class="ion-chatbubbles"></i>
+            </md-button>
+         </md-list-item>
+      </md-list>
+      <ng-include src="'templates/partials/comments.html'"></ng-include>
+   </md-card>
+</md-content>

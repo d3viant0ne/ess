@@ -1,0 +1,12 @@
+<md-sidenav md-swipe-left="onSwipeLeftMenu()" layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left">
+  	<header>
+  		<div md-header-picture-sidebar style="background-image:url(img/profile.jpg)"></div>
+	</header> 
+   <md-list>
+      <md-list-item class="custom-sidebar" ng-repeat="link in links" ng-click="openLinkMaterial($index)">
+      	<md-icon class="icon-sidebar" ng-class="link.icon"></md-icon>
+       	<p>{{link.title}}</p>
+     	</md-list-item>
+     	<md-divider></md-divider>
+   </md-list>
+</md-sidenav>

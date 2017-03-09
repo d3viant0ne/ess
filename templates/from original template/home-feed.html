@@ -1,0 +1,25 @@
+<ng-include src="'templates/partials/header.html'"></ng-include>
+<md-content layout="column" flex class="md-padding has-header">
+	<md-card ng-repeat="post in posts">
+      <img ng-click="showPost($index);" ng-src="{{post.image}}" class="md-card-image" alt="{{post.title}}">
+      <md-card-content class="content-div">
+        <p ng-click="showPost($index);">{{post.title}}</p>
+      </md-card-content>
+      <md-list class="comment_box">
+         <md-list-item>
+         	<md-button ng-click="shareMain();" class="md-icon-button" aria-label="Share">
+              <i class="ion-forward"></i>
+            </md-button>
+            <md-button ng-show="liked" ng-click="likeThisPost(true)" class="md-icon-button icon-red" aria-label="Like">
+              <i class="ion-ios-heart-outline"></i>
+            </md-button>
+            <md-button ng-hide="liked" ng-click="likeThisPost(false);" class="md-icon-button icon-red" aria-label="Like">
+              <i class="ion-ios-heart"></i>
+            </md-button>
+            <md-button ng-click="showPost($index);" class="md-icon-button" aria-label="More">
+              <i class="ion-chatbubbles"></i>
+            </md-button>
+         </md-list-item>
+      </md-list>
+    </md-card>
+</md-content>
