@@ -15,7 +15,7 @@ module.exports = {
     resolve: {
         extensions: ['*','.js', '.es6', 'html', 'scss'],
         alias: {
-            'constants': path.resolve(__dirname, './data/constants.json')
+            'constants': path.resolve(__dirname, './data/constants')
         }
     },
     plugins: [

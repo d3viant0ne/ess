@@ -15,6 +15,7 @@ module.exports = {
 
         vm.$onInit = function(){
             console.log('from the dashboard panel component', vm.panel);
+            console.log('constants feed', constants.feed)
         }
     }
 }
