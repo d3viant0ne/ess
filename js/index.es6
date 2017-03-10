@@ -11,4 +11,4 @@ angular.module('ess')
     .service('userService', require('./services/user'))
     .component('mainComponent', require('./components/main/main'))
     .component('dashboard', require('./components/dashboard/dashboard'))
-    .component('dashboardTile', require('./components/dashboard/dashboardTile'));
+    .component('dashboardPanel', require('./components/dashboard/dashboardPanel'));
