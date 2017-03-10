@@ -1,22 +1,23 @@
 require('./dashboard.scss');
 var login = require('../../services/login');
-//var login = Login();
  
 module.exports = {
     template: require('./dashboard.html'),
     controllerAs: 'vm',
     controller: function() {
         var vm = this;
-        console.log('hello from the main component');
-        console.log(login);
-        login.auth();
-        vm.tiles = [
-            {title:'my Time123456', image:'time.jpg', link: ''},
-            {title:'my Pay', image:'money.jpg', link: ''},
-            {title:'my APTO', image:'plane.jpg', link: ''},
-            {title:'Ask HR', image:'hr.jpg', link: ''},
-            {title:'Alerts', image:'tablet.jpg', link: ''},
-            {title:'My News', image:'paper.jpg', link: ''}
+        console.log('hello from the dashboard component');
+        // console.log(login);
+        // login.auth();
+        vm.panels = [
+            {title:'my Time', image:'clock.jpg', link: 'time-statement', visible: true, alerts: []},
+            {title: 'my Schedule', image: 'BMW_Efficient_Dynamics1.jpg', link: 'workSchedule', visible: true, alerts: []},
+            {title:'my Pay', image:'504705052.jpg', link: 'pay-statementList', visible: true, alerts: []},
+            {title:'my APTO', image:'513313356.jpg', link: 'timeOff', visible: true, alerts: []},
+            {title:'Attendance Points', image:'158947043.jpg', link: 'attendancePoints', visible: true, alerts: []},
+            {title:'Ask HR', image:'512056034.jpg', link: 'askHRDashboard', visible: true, alerts: []},
+            {title:'Alerts', image:'527045000.jpg', link: 'myMessages', visible: true, alerts: []},
+            {title:'My News', image:'514228956.jpg', link: 'news', visible: true, alerts: []}
         ];
     }
 }

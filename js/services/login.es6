@@ -3,7 +3,7 @@
 var service = {};
 
 service.auth = function(){
-    console.log('hello from service.auth!');
+    console.log('hello from LoginService.auth!');
 }
 
 

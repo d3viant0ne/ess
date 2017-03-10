@@ -1,6 +1,5 @@
 .dashboard {
   
-  
   &-welcome {
     text-align: center;
     //background: $navbar-bg-color;
@@ -34,62 +33,62 @@
     padding: 5px;
     
 
-  }
-  
-  &-panel {
-    padding: 5px;
-    @include flexbox();
-    @include flex-direction(column);
-    position: relative;
-    
-    @media (max-width: 767px) {
-      width: 50%;
-    }
-    @media (min-width: 768px) {
-      width: 33.333%;
-    }
-    
-    &-image {
-      height: 60px;
-      background-size: cover;
-      background-position: center center;
-      border-radius: 4px 4px 0 0;
-    }
-    
-    a {
-      background: white;
-      border-radius: 4px;
-      display: block;
-      @include flex(1);    
-      position: relative;  
+    &-panel {
+      padding: 5px;
+      @include flexbox();
+      @include flex-direction(column);
+      position: relative;
       
-      h4 {
-        font-size: 15px;
-        line-height: 20px;
-        font-weight: bold;
-        color: black;          
-        margin: 0;
-        padding: 8px 12px;
-        //height: 60px;
+      @media (max-width: 767px) {
+        width: 50%;
       }
-
-      .count {
-        $count-size: 30px;
-        position: absolute;
-        font-size: 17px;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-        background: #e33541;
-        line-height: $count-size;
-        border-radius: $count-size/2;
-        min-width: $count-size;
-        top: -4px;
-        right: -4px;
+      @media (min-width: 768px) {
+        width: 33.333%;
       }
-
       
+      img {
+        height: 60px;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 4px 4px 0 0;
+      }
+      
+      > a {
+        background: white;
+        border-radius: 4px;
+        display: block;
+        @include flex(1);    
+        position: relative;  
+        
+        h4 {
+          font-size: 15px;
+          line-height: 20px;
+          font-weight: bold;
+          color: black;          
+          margin: 0;
+          padding: 8px 12px;
+          //height: 60px;
+        }
+
+        .count {
+          $count-size: 30px;
+          position: absolute;
+          font-size: 17px;
+          font-weight: bold;
+          color: white;
+          text-align: center;
+          background: #e33541;
+          line-height: $count-size;
+          border-radius: $count-size/2;
+          min-width: $count-size;
+          top: -4px;
+          right: -4px;
+        }
+
+        
+      }
     }
+
   }
 
 }
