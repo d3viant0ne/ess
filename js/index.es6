@@ -1,6 +1,5 @@
 import angular from 'angular';
 import material from 'angular-material';
-//require('mixins');
 
 var app = require('./app');
 

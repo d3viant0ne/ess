@@ -7,6 +7,7 @@ module.exports = {
     controller: function() {
         var vm = this;
         console.log('hello from the dashboard component');
+        console.log('get me some constants!', constants)
         // console.log(login);
         // login.auth();
         vm.panels = [
