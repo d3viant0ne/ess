@@ -1,8 +1,11 @@
 import angular from 'angular';
+import components from './index';
 import uirouter from 'angular-ui-router';
 import routing from './app.config';
+import routes from './app.routes';
 
-var app = angular.module('ess', [uirouter])
-                 .config(routing);
+var app = angular.module('ess', [uirouter, components])
+                 .config(routing)
+                 .config(routes)
     
-console.log('Hello from app.es6',app);
+components(app);

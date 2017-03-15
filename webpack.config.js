@@ -3,7 +3,7 @@ let webpack = require('webpack');
 
 module.exports = {
     context: path.resolve('js'),
-    entry: ['./app','./index'],
+    entry: './app',
     output: {
         path: path.resolve('build/js/'),
         publicPath: '/public/assets/js/',
@@ -24,6 +24,14 @@ module.exports = {
         // (must also include them in resolve.alias above)
         new webpack.ProvidePlugin({
             'constants': 'constants'
+        }),
+        new webpack.DefinePlugin({
+            'INCLUDE_ALL_MODULES': function includeAllModulesGlobalFn(modulesArray, application) {
+                console.log('including all modules:', modulesArray, application);
+                modulesArray.forEach(function executeModuleIncludesFn(moduleFn) {
+                    moduleFn(application);
+                });
+            }
         })
     ],
     module: {
